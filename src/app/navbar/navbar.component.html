@@ -1,0 +1,18 @@
+<nav class="navbar">
+  <span class="navbar-title">E-Commerce Store</span>
+  <div *ngIf="currentUser" class="navbar-user">
+    <span class="navbar-welcome">Welcome, {{ currentUser.firstName }}</span>
+    <div class="navbar-links">
+      <a routerLink="/users" routerLinkActive="router-link-active"
+        >Users List</a
+      >
+      <a routerLink="/products" routerLinkActive="router-link-active"
+        >Products</a
+      >
+      <a routerLink="/add-product" routerLinkActive="router-link-active"
+        >Add Product</a
+      >
+    </div>
+    <button class="navbar-logout" (click)="logout()">Logout</button>
+  </div>
+</nav>

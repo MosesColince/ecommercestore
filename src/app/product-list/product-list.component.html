@@ -1,0 +1,13 @@
+<div class="product-list">
+  <ul>
+    <li *ngFor="let product of products" (click)="selectProduct(product.id)">
+      <mat-card class="product-card">
+        <mat-card-title>{{ product.title }}</mat-card-title>
+        <mat-card-content>
+          <p>Price: {{ product.price | currency }}</p>
+          <!--<p>{{ product.description }}</p>-->
+        </mat-card-content>
+      </mat-card>
+    </li>
+  </ul>
+</div>
